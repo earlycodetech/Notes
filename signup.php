@@ -1,3 +1,7 @@
+<?php
+require 'modules/sessions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +16,9 @@
 
     <section class="min-vh-100" style="background-image: url(assets/images/main-bg.jpg); background-size: cover;">
         <div class="min-vh-100 w-100 d-flex justify-content-center align-items-center">
-            <div class="card border-0 shadow-lg" style="min-width: 400px;">
-                <div class="alert alert-danger position-fixed end-0 animate__animated animate__fadeInRight" style="z-index: 9999; top: 25%;">
-                    <strong>This is an error</strong>
-                </div>
-
+        <div class="card border-0 shadow-lg" style="min-width: 400px;">
+               
+                <?php success_msg(); error_msg();?>
                 <form action="app/register_control" method="post">
                     <h3 class="text-center py-2">
                         Create an Account
